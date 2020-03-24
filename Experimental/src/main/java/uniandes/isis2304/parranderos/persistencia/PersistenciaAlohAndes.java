@@ -88,12 +88,12 @@ public class PersistenciaAlohAndes {
 	 */
 	private PersistenciaAlohAndes ()
 	{
-		pmf = JDOHelper.getPersistenceManagerFactory("AlohAndes");		
+		pmf = JDOHelper.getPersistenceManagerFactory("Parranderos");		
 		crearClasesSQL ();
 		
 		// Define los nombres por defecto de las tablas de la base de datos
 		tablas = new LinkedList<String> ();
-		tablas.add ("Alohandes_sequence");
+		tablas.add ("Parranderos_sequence");
 		tablas.add ("ALOHANDES");
 		tablas.add ("ARRIENDO");
 		tablas.add ("CARACTERISTICAESTABLECIMIENTO");

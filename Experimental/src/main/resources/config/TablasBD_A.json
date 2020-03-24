@@ -3,7 +3,7 @@
 	"unidadPersistencia": "Parranderos",
 	"tablas":
 	[
-		"Alohandes_sequence",
+		"Parranderos_sequence",
 		"A_ALOHANDES",
 		"A_ARRIENDO",
 		"A_CARACTERISTICAESTABLECIMIENTO",

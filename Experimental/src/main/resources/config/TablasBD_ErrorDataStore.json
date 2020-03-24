@@ -3,7 +3,7 @@
 	"unidadPersistencia": "ParranderosErrorDS",
 	"tablas":
 	[
-		"Alohandes_sequence",
+		"Parranderos_sequence",
 		"X_ALOHANDES",
 		"X_ARRIENDO",
 		"X_CARACTERISTICAESTABLECIMIENTO",
