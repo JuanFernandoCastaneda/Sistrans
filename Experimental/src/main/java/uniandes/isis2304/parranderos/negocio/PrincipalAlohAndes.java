@@ -1,5 +1,6 @@
 package uniandes.isis2304.parranderos.negocio;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -77,9 +78,9 @@ public class PrincipalAlohAndes {
 	 * @param duracion
 	 * @return nuevo arriendo creado.
 	 */
-	public Arriendo adicionarReserva(long idUsuario, long idEstablecimiento, int descuento, int duracion) {
+	public Arriendo adicionarReserva(long idUsuario, long idEstablecimiento, int descuento, Timestamp fechaInicio, int duracion) {
 		log.info("Adicionando reserva");
-		Arriendo arriendo = pp.adicionarReserva (idUsuario, idEstablecimiento, descuento, duracion);
+		Arriendo arriendo = pp.adicionarReserva (idUsuario, idEstablecimiento, descuento, fechaInicio, duracion);
 		log.info("Adicionada reserva id " + arriendo.getId());
 		return arriendo;
 	}
