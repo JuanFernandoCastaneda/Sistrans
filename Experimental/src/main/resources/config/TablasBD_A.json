@@ -1,0 +1,19 @@
+{
+	"title": "Nombres de las tablas de Parranderos Uniandes para la aplicación A",
+	"unidadPersistencia": "Parranderos",
+	"tablas":
+	[
+		"Alohandes_sequence",
+		"A_ALOHANDES",
+		"A_ARRIENDO",
+		"A_CARACTERISTICAESTABLECIMIENTO",
+		"A_CARACTERISTICAHABITACION",
+		"A_ESTABLECIMIENTO",
+		"A_HABITACION",
+		"A_HORARIO",
+		"A_SEGUROARRENDAMIENTO",
+		"A_TIPOESTABLECIMIENTO",
+		"A_TIPOUSUARIO",
+		"A_USUARIO"
+	]
+}

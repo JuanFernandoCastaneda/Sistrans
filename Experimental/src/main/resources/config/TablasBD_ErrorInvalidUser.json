@@ -1,0 +1,19 @@
+{
+	"title": "Nombres de las tablas de Parranderos Uniandes para pruebas de la aplicación cuando la base de datos no existe o está caida",
+	"unidadPersistencia": "ParranderosErrorUser",
+	"tablas":
+	[
+		"Alohandes_sequence",
+		"X_ALOHANDES",
+		"X_ARRIENDO",
+		"X_CARACTERISTICAESTABLECIMIENTO",
+		"X_CARACTERISTICAHABITACION",
+		"X_ESTABLECIMIENTO",
+		"X_HABITACION",
+		"X_HORARIO",
+		"X_SEGUROARRENDAMIENTO",
+		"X_TIPOESTABLECIMIENTO",
+		"X_TIPOUSUARIO",
+		"X_USUARIO"
+	]
+}
