@@ -92,3 +92,8 @@ ORA-02289: sequence does not exist
 12:46:57,495 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
 12:47:26,336 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
 12:47:26,878 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 23
+13:08:23,572 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+13:08:23,655 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+13:08:23,788 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+13:09:07,163 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+13:09:09,019 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 24

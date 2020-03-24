@@ -26,6 +26,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.jdo.JDODataStoreException;
@@ -250,10 +251,16 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
     		String idUsuario = JOptionPane.showInputDialog (this, "Id del usuario a arrendar", "Adicionar reserva", JOptionPane.QUESTION_MESSAGE);
     		String idEstablecimiento = JOptionPane.showInputDialog (this, "Id del establecimiento", "Adicionar reserva", JOptionPane.QUESTION_MESSAGE);
     		String descuento = JOptionPane.showInputDialog (this, "Descuento", "Adicionar reserva", JOptionPane.QUESTION_MESSAGE);
+    		String dia = JOptionPane.showInputDialog (this, "Día en números", "Adicionar reserva", JOptionPane.QUESTION_MESSAGE);
+    		String mes = JOptionPane.showInputDialog (this, "Mes en números", "Adicionar reserva", JOptionPane.QUESTION_MESSAGE);
+    		String anio = JOptionPane.showInputDialog (this, "Anio en números", "Adicionar reserva", JOptionPane.QUESTION_MESSAGE);
+    		@SuppressWarnings("deprecation")
+			Timestamp fechaInicio = new Timestamp(Integer.parseInt(anio), Integer.parseInt(mes), Integer.parseInt(dia), 0, 0, 0, 0);
     		String duracion = JOptionPane.showInputDialog (this, "Duración", "Adicionar reserva", JOptionPane.QUESTION_MESSAGE);
     		if (idUsuario != null && idEstablecimiento != null && descuento != null && duracion != null)
     		{
-        		VOArriendo ar = alohandes.adicionarReserva(Long.parseLong(idUsuario), Long.parseLong(idEstablecimiento), Integer.parseInt(descuento), Integer.parseInt(duracion));
+        		VOArriendo ar = alohandes.adicionarReserva(Long.parseLong(idUsuario), Long.parseLong(idEstablecimiento), Integer.parseInt(descuento), fechaInicio, 
+        				Integer.parseInt(duracion));
         		if (ar == null)
         		{
         			throw new Exception ("No se pudo crear la reserva");

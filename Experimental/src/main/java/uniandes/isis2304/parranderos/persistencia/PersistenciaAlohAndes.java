@@ -368,19 +368,17 @@ public class PersistenciaAlohAndes {
 	 * @param duracion
 	 * @return el arriendo creado.
 	 */
-	public Arriendo adicionarReserva(long idUsuario, long idEstablecimiento, int descuento, int duracion) {
+	public Arriendo adicionarReserva(long idUsuario, long idEstablecimiento, int descuento, Timestamp fechaInicio, int duracion) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx = pm.currentTransaction();
 		try {
 			tx.begin();
 			long id = nextval();
-			Timestamp timestamp = new Timestamp(0);
-			timestamp.setTime(timestamp.getTime());
 			String estado = "Activo";
-			long tuplasInsertadas = sqlArriendo.adicionarArriendo(pmf.getPersistenceManager(), id, idUsuario, idEstablecimiento, descuento, timestamp, duracion, estado);
+			long tuplasInsertadas = sqlArriendo.adicionarArriendo(pmf.getPersistenceManager(), id, idUsuario, idEstablecimiento, descuento, fechaInicio, duracion, estado);
 			tx.commit();
 			log.trace("Inserci�n de arriendo id " + id + ": " + tuplasInsertadas + " tuplas insertadas");
-			return new Arriendo(id, idUsuario, idEstablecimiento, descuento, timestamp, duracion, estado);
+			return new Arriendo(id, idUsuario, idEstablecimiento, descuento, fechaInicio, duracion, estado);
 		} catch(Exception e) {
 			log.error("Exception: " + e.getMessage() + "\n" + darDetalleException(e));
 			return null;
