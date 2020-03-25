@@ -454,7 +454,7 @@ public class PersistenciaAlohAndes {
         {
 			Object [] datos = (Object []) tupla;
 			long id = ((BigDecimal) datos [0]).longValue ();
-			double dineroGanado = ((Double) datos [1]).doubleValue();
+			double dineroGanado = ((BigDecimal) datos [1]).doubleValue();
 
 			Object [] resp = new Object [2];
 			resp [0] = id;
