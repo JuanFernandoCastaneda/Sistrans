@@ -255,7 +255,9 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
     		String mes = JOptionPane.showInputDialog (this, "Mes en números", "Adicionar reserva", JOptionPane.QUESTION_MESSAGE);
     		String anio = JOptionPane.showInputDialog (this, "Anio en números", "Adicionar reserva", JOptionPane.QUESTION_MESSAGE);
     		@SuppressWarnings("deprecation")
-			Timestamp fechaInicio = new Timestamp(Integer.parseInt(anio), Integer.parseInt(mes), Integer.parseInt(dia), 0, 0, 0, 0);
+			Timestamp fechaInicio = new Timestamp(Integer.parseInt(anio) - 1900, Integer.parseInt(mes), Integer.parseInt(dia), 0, 0, 0, 0);
+    		System.out.println(anio + "-" + mes + "-" + dia);
+    		System.out.println(fechaInicio);
     		String duracion = JOptionPane.showInputDialog (this, "Duración", "Adicionar reserva", JOptionPane.QUESTION_MESSAGE);
     		if (idUsuario != null && idEstablecimiento != null && descuento != null && duracion != null)
     		{
