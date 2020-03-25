@@ -18,6 +18,19 @@
 				}
 			]
 		},
+		{ "menuTitle": "Alojamiento",
+		  "options":
+			[
+				{
+					"label": "Cancelar una oferta",
+					"event": "cancelarOfertaAlojamiento"
+				},
+				{
+					"label": "Cancelar",
+					"event": "cancelarReserva"
+				}
+			]
+		},
 		{ "menuTitle": "Mantenimiento",
 		  "options":
 			[

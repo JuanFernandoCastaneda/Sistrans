@@ -310,6 +310,33 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 			panelDatos.actualizarInterfaz(resultado);
 		}
     }
+    
+    public void cancelarOfertaAlojamiento()
+    {
+    	try {
+    		String id = JOptionPane.showInputDialog (this, "Id del establecimiento?", "Cancelar oferta de alojamiento por ID del establecimiento", JOptionPane.QUESTION_MESSAGE);
+    		if (id != null)
+		{
+			long idEstab = Long.valueOf (id);
+			long esCancelada = alohandes.cancelarOfertaAlojamiento(idEstab);
+
+			String resultado = "En Cancelar Oferta\n\n";
+			resultado += "La oferta del establecimiento " + esCancelada + " fue cancelada\n";
+			resultado += "\n Operación terminada";
+			panelDatos.actualizarInterfaz(resultado);
+		}
+		else
+		{
+			panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
+		}
+    	}
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+			String resultado = generarMensajeError(e);
+			panelDatos.actualizarInterfaz(resultado);
+		}
+    }
 //
 //    /**
 //     * Consulta en la base de datos los tipos de bebida existentes y los muestra en el panel de datos de la aplicación
