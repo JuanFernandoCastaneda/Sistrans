@@ -356,6 +356,17 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
     	}
     }
     
+    public void ofertasMasPopulares()
+    {
+    	List<Long> respuesta = alohandes.ofertasMasPopulares();
+    	int puesto = 1;
+    	for(Long id: respuesta) {
+    		String resultado = "El establecimiento en el puesto" + puesto + "de popularidad por sus ofertas es : " + id ;
+    		panelDatos.actualizarInterfaz(resultado);
+    		puesto++;
+    	}
+    }
+    
     
     
 //
