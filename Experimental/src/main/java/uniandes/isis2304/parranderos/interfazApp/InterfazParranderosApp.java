@@ -238,7 +238,7 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
     }
     
 	/* ****************************************************************
-	 * 			CRUD de TipoBebida
+	 * 			CRUD de 
 	 *****************************************************************/
     /**
      * Adiciona un tipo de bebida con la información dada por el usuario
@@ -281,6 +281,66 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 			String resultado = generarMensajeError(e);
 			panelDatos.actualizarInterfaz(resultado);
 		}
+    }
+    
+    public void cancelarReserva()
+    {
+    	try 
+    	{
+    		String id = JOptionPane.showInputDialog (this, "Id de la reserva?", "Cancelar Reserva por ID", JOptionPane.QUESTION_MESSAGE);
+    		if (id != null)
+    		{
+    			long idReserva = Long.valueOf (id);
+    			long reCancelada = alohandes.cancelarReserva(idReserva);
+
+    			String resultado = "En Cancelar Reserva\n\n";
+    			resultado += "La reserva" + reCancelada + " fue cancelada\n";
+    			resultado += "\n Operación terminada";
+    			panelDatos.actualizarInterfaz(resultado);
+    		}
+    		else
+    		{
+    			panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
+    		}
+		} 
+    	catch (Exception e) 
+    	{
+			e.printStackTrace();
+			String resultado = generarMensajeError(e);
+			panelDatos.actualizarInterfaz(resultado);
+		}
+    }
+    
+    public void cancelarOfertaAlojamiento()
+    {
+    	try {
+    		String id = JOptionPane.showInputDialog (this, "Id del establecimiento?", "Cancelar oferta de alojamiento por ID del establecimiento", JOptionPane.QUESTION_MESSAGE);
+    		if (id != null)
+		{
+			long idEstab = Long.valueOf (id);
+			long esCancelada = alohandes.cancelarOfertaAlojamiento(idEstab);
+
+			String resultado = "En Cancelar Oferta\n\n";
+			resultado += "La oferta del establecimiento " + esCancelada + " fue cancelada\n";
+			resultado += "\n Operación terminada";
+			panelDatos.actualizarInterfaz(resultado);
+		}
+		else
+		{
+			panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
+		}
+    	}
+		catch (Exception e) 
+		{
+			e.printStackTrace();
+			String resultado = generarMensajeError(e);
+			panelDatos.actualizarInterfaz(resultado);
+		}
+    }
+    
+    public void dineroRecibidoPorCadaProveedor()
+    {
+    	System.out.println(alohandes.dineroRecibidoPorCadaProveedor());
     }
 //
 //    /**

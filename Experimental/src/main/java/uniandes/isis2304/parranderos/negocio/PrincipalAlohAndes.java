@@ -106,7 +106,7 @@ public class PrincipalAlohAndes {
 	 */
 	public long cancelarOfertaAlojamiento(long id) {
 		log.info("Cancelando oferta alojamiento");
-		long oferta = pp.cancelarReserva(id);
+		long oferta = pp.retirarOfertaAlojamiento(id);
 		log.info("Cancelada la oferta de alojamiento con id " + oferta);
 		return oferta;
 	}
