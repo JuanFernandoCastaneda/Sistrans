@@ -97,3 +97,50 @@ ORA-02289: sequence does not exist
 13:08:23,788 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
 13:09:07,163 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
 13:09:09,019 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 24
+18:35:20,153 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+18:35:20,178 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+18:35:20,398 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+18:42:47,481 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+18:42:47,806 (AWT-EventQueue-0) ERROR [uniandes.isis2304.parranderos.persistencia.PersistenciaAlohAndes] - Exception: Error con la ejecucion de Query de SQL "INSERT INTO A_ARRIENDO (id, idUsuario, idEstablecimiento, descuento, fechaInicio, duracion, estado) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304D052010.A_ARRIENDO_FK_IDUSUARIO) violada - clave principal no encontrada
+
+18:51:02,241 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+18:51:02,312 (AWT-EventQueue-0) ERROR [uniandes.isis2304.parranderos.persistencia.PersistenciaAlohAndes] - Exception: Error con la ejecucion de Query de SQL "INSERT INTO A_ARRIENDO (id, idUsuario, idEstablecimiento, descuento, fechaInicio, duracion, estado) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304D052010.A_ARRIENDO_FK_IDUSUARIO) violada - clave principal no encontrada
+
+18:52:23,840 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+18:52:23,841 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+18:52:23,853 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+18:53:40,710 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+18:53:40,828 (AWT-EventQueue-0) ERROR [uniandes.isis2304.parranderos.persistencia.PersistenciaAlohAndes] - Exception: Error con la ejecucion de Query de SQL "INSERT INTO A_ARRIENDO (id, idUsuario, idEstablecimiento, descuento, fechaInicio, duracion, estado) values (?, ?, ?, ?, ?, ?, ?)".
+ORA-02291: restricción de integridad (ISIS2304D052010.A_ARRIENDO_FK_IDUSUARIO) violada - clave principal no encontrada
+
+19:00:16,131 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+19:00:16,132 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+19:00:16,144 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:00:24,167 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+19:00:24,256 (AWT-EventQueue-0) ERROR [uniandes.isis2304.parranderos.persistencia.PersistenciaAlohAndes] - Exception: Error con la ejecucion de Query de SQL "SELECT Parranderos_sequence.nextval FROM DUAL".
+ORA-02289: no existe la secuencia
+
+19:00:33,678 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+19:00:33,702 (AWT-EventQueue-0) ERROR [uniandes.isis2304.parranderos.persistencia.PersistenciaAlohAndes] - Exception: Error con la ejecucion de Query de SQL "SELECT Parranderos_sequence.nextval FROM DUAL".
+ORA-02289: no existe la secuencia
+
+19:04:56,528 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+19:04:56,528 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+19:04:56,541 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:10:43,962 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+19:10:43,962 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+19:10:43,974 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:10:50,647 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+19:10:50,791 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 29
+19:18:39,388 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+19:18:39,389 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+19:18:39,403 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:22:34,137 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+19:22:34,138 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+19:22:34,151 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+19:22:37,992 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Cancelando reserva
+19:22:38,162 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Cancelada reserva id 1
+19:22:57,398 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Cancelando reserva
+19:22:57,419 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Cancelada reserva id 24
