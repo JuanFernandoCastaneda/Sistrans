@@ -33,6 +33,10 @@
 				{
 					"label": "Dinero recibido por cada proveedor de alojamiento",
 					"event": "dineroRecibidoPorCadaProveedor"
+				},
+				{
+					"label": "Veinte ofertas más famosas",
+					"event": "ofertasMasPopulares"
 				}
 			]
 		},

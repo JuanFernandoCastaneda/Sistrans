@@ -283,6 +283,9 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 		}
     }
     
+    /**
+     * Método que cancela una reserva de alojamiento.
+     */
     public void cancelarReserva()
     {
     	try 
@@ -311,6 +314,9 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 		}
     }
     
+    /**
+     * Método que cancela una oferta de alojamiento, establecimiento.
+     */
     public void cancelarOfertaAlojamiento()
     {
     	try {
@@ -338,101 +344,20 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 		}
     }
     
+    /**
+     * Método que muestra la cantidad de dinero ganada por los proveedores en lo que va del año.
+     */
     public void dineroRecibidoPorCadaProveedor()
     {
-    	System.out.println(alohandes.dineroRecibidoPorCadaProveedor());
+    	List<Object[]> respuesta = alohandes.dineroRecibidoPorCadaProveedor();
+    	for(Object[] proveedor: respuesta) {
+    		String resultado = "El usuario proveedor con id " + proveedor[0] + " ha recibido " + proveedor[1] + " cantidad de dinero";
+    		panelDatos.actualizarInterfaz(resultado);
+    	}
     }
-//
-//    /**
-//     * Consulta en la base de datos los tipos de bebida existentes y los muestra en el panel de datos de la aplicación
-//     */
-//    public void listarTipoBebida( )
-//    {
-//    	try 
-//    	{
-//			List <VOTipoBebida> lista = parranderos.darVOTiposBebida();
-//
-//			String resultado = "En listarTipoBebida";
-//			resultado +=  "\n" + listarTiposBebida (lista);
-//			panelDatos.actualizarInterfaz(resultado);
-//			resultado += "\n Operación terminada";
-//		} 
-//    	catch (Exception e) 
-//    	{
-////			e.printStackTrace();
-//			String resultado = generarMensajeError(e);
-//			panelDatos.actualizarInterfaz(resultado);
-//		}
-//    }
-//
-//    /**
-//     * Borra de la base de datos el tipo de bebida con el identificador dado po el usuario
-//     * Cuando dicho tipo de bebida no existe, se indica que se borraron 0 registros de la base de datos
-//     */
-//    public void eliminarTipoBebidaPorId( )
-//    {
-//    	try 
-//    	{
-//    		String idTipoStr = JOptionPane.showInputDialog (this, "Id del tipo de bedida?", "Borrar tipo de bebida por Id", JOptionPane.QUESTION_MESSAGE);
-//    		if (idTipoStr != null)
-//    		{
-//    			long idTipo = Long.valueOf (idTipoStr);
-//    			long tbEliminados = parranderos.eliminarTipoBebidaPorId (idTipo);
-//
-//    			String resultado = "En eliminar TipoBebida\n\n";
-//    			resultado += tbEliminados + " Tipos de bebida eliminados\n";
-//    			resultado += "\n Operación terminada";
-//    			panelDatos.actualizarInterfaz(resultado);
-//    		}
-//    		else
-//    		{
-//    			panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
-//    		}
-//		} 
-//    	catch (Exception e) 
-//    	{
-////			e.printStackTrace();
-//			String resultado = generarMensajeError(e);
-//			panelDatos.actualizarInterfaz(resultado);
-//		}
-//    }
-//
-//    /**
-//     * Busca el tipo de bebida con el nombre indicado por el usuario y lo muestra en el panel de datos
-//     */
-//    public void buscarTipoBebidaPorNombre( )
-//    {
-//    	try 
-//    	{
-//    		String nombreTb = JOptionPane.showInputDialog (this, "Nombre del tipo de bedida?", "Buscar tipo de bebida por nombre", JOptionPane.QUESTION_MESSAGE);
-//    		if (nombreTb != null)
-//    		{
-//    			VOTipoBebida tipoBebida = parranderos.darTipoBebidaPorNombre (nombreTb);
-//    			String resultado = "En buscar Tipo Bebida por nombre\n\n";
-//    			if (tipoBebida != null)
-//    			{
-//        			resultado += "El tipo de bebida es: " + tipoBebida;
-//    			}
-//    			else
-//    			{
-//        			resultado += "Un tipo de bebida con nombre: " + nombreTb + " NO EXISTE\n";    				
-//    			}
-//    			resultado += "\n Operación terminada";
-//    			panelDatos.actualizarInterfaz(resultado);
-//    		}
-//    		else
-//    		{
-//    			panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
-//    		}
-//		} 
-//    	catch (Exception e) 
-//    	{
-////			e.printStackTrace();
-//			String resultado = generarMensajeError(e);
-//			panelDatos.actualizarInterfaz(resultado);
-//		}
-//    }
-//
+    
+    
+    
 //
 //	/* ****************************************************************
 //	 * 			Métodos administrativos

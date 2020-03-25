@@ -50,10 +50,11 @@ public class SQLUsuario {
 	 * @return id y dinero.
 	 */
 	public List<Object> dineroRecibidoProveedor(PersistenceManager pm) {
-		String sql = "SELECT idDuenio, SUM(es.costo * ar.duracion) AS DineroRecibido " + 
-				"FROM Establecimiento es, Arriendo ar " + 
-				"WHERE es.id = ar.idEstablecimiento AND EXTRACT(YEAR FROM ar.fechaInicio) = EXTRACT(YEAR FROM CURRENT_DATE) " + 
-				"GROUP BY es.idDuenio";
+		String sql = "SELECT IDDUENIO, SUM(COSTO * DURACION * (100 - DESCUENTO) / 100)";
+		sql += " FROM " + pp.darTablaEstablecimiento() + " ESTABLECIMIENTO";
+		sql += " INNER JOIN "+ pp.darTablaArriendo() + " ARRIENDO ON ESTABLECIMIENTO.ID = ARRIENDO.IDESTABLECIMIENTO";
+		sql += " WHERE EXTRACT(YEAR FROM FECHAINICIO) = EXTRACT(YEAR FROM CURRENT_DATE)"; 
+		sql += " GROUP BY IDDUENIO";
 		Query q = pm.newQuery(SQL, sql);
 		return q.executeList();
 	}
