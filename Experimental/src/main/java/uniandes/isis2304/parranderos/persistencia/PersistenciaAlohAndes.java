@@ -96,8 +96,8 @@ public class PersistenciaAlohAndes {
 		tablas.add ("Parranderos_sequence");
 		tablas.add ("ALOHANDES");
 		tablas.add ("ARRIENDO");
-		tablas.add ("CARACTERISTICAESTABLECIMIENTO");
-		tablas.add ("CARACTERISTICAHABITACION");
+		tablas.add ("CARACTERISTICAE");
+		tablas.add ("CARACTERISTICAH");
 		tablas.add ("ESTABLECIMIENTO");
 		tablas.add ("HABITACION");
 		tablas.add ("HORARIO");
