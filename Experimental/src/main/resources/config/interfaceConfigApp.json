@@ -18,6 +18,24 @@
 				}
 			]
 		},
+		{ "menuTitle": "Alojamiento",
+		  "options":
+			[
+				{
+					"label": "Cancelar una oferta",
+					"event": "cancelarOfertaAlojamiento"
+				}
+			]
+		},
+		{ "menuTitle": "Consultas",
+		  "options":
+			[
+				{
+					"label": "Dinero recibido por cada proveedor de alojamiento",
+					"event": "dineroRecibidoPorCadaProveedor"
+				}
+			]
+		},
 		{ "menuTitle": "Mantenimiento",
 		  "options":
 			[
