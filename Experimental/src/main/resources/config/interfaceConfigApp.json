@@ -24,10 +24,15 @@
 				{
 					"label": "Cancelar una oferta",
 					"event": "cancelarOfertaAlojamiento"
-				},
+				}
+			]
+		},
+		{ "menuTitle": "Consultas",
+		  "options":
+			[
 				{
-					"label": "Cancelar",
-					"event": "cancelarReserva"
+					"label": "Dinero recibido por cada proveedor de alojamiento",
+					"event": "dineroRecibidoPorCadaProveedor"
 				}
 			]
 		},

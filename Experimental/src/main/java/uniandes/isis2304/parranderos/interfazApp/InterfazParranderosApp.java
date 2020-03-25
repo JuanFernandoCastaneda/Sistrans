@@ -337,6 +337,11 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 			panelDatos.actualizarInterfaz(resultado);
 		}
     }
+    
+    public void dineroRecibidoPorCadaProveedor()
+    {
+    	System.out.println(alohandes.dineroRecibidoPorCadaProveedor());
+    }
 //
 //    /**
 //     * Consulta en la base de datos los tipos de bebida existentes y los muestra en el panel de datos de la aplicación
