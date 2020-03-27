@@ -1,5 +1,10 @@
 package uniandes.isis2304.parranderos.persistencia;
 
+import java.sql.Timestamp;
+
+import javax.jdo.PersistenceManager;
+import javax.jdo.Query;
+
 public class SQLCaracteristicaEstablecimiento {
 
 	/* ****************************************************************
@@ -31,4 +36,10 @@ public class SQLCaracteristicaEstablecimiento {
 		this.pp = pp;
 	}
 	//TODO los m�todos que sean necesarios para esta clase.
+	
+	public long adicionarCaracteristicaEstablecimiento(PersistenceManager pm, long id, long idEstablecimiento, String nombre, String descripcion, double costo) {
+		Query q = pm.newQuery(SQL, "INSERT INTO " + pp.darTablaCaracteristicaEstablecimiento() + " (id, idEstablecimiento, nombre, descripcion, costo) values (?, ?, ?, ?, ?)");
+        q.setParameters(id, idEstablecimiento, nombre, descripcion, costo);
+        return (long) q.executeUnique();
+    }
 }

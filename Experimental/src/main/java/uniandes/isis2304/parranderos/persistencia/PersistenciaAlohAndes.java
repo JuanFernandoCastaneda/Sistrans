@@ -17,6 +17,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import uniandes.isis2304.parranderos.negocio.Arriendo;
+import uniandes.isis2304.parranderos.negocio.CaracteristicaEstablecimiento;
 import uniandes.isis2304.parranderos.negocio.Establecimiento;
 import uniandes.isis2304.parranderos.negocio.Usuario;
 
@@ -559,7 +560,7 @@ public class PersistenciaAlohAndes {
 			long id = nextval();
 			long tuplasInsertadas = sqlEstablecimiento.adicionarEstablecimiento(pmf.getPersistenceManager(), id, nombre, idTipoEstablecimiento, direccion, costo, porDiaOMes, activo, idSeguroArrendamiento, idHorario, idDuenio);
 			tx.commit();
-			log.trace("Inserci�n de arriendo id " + id + ": " + tuplasInsertadas + " tuplas insertadas");
+			log.trace("Inserci�n de establecimiento id " + id + ": " + tuplasInsertadas + " tuplas insertadas");
 			return new Establecimiento(id, nombre, idTipoEstablecimiento, direccion, costo, porDiaOMes, idSeguroArrendamiento, idDuenio, idHorario, activo);
 		} 
 		catch(Exception e) 
@@ -575,6 +576,34 @@ public class PersistenciaAlohAndes {
 			pm.close();
 		}
 	}
+	
+	public CaracteristicaEstablecimiento adicionarCaracteristicaEstablecimiento(long idEstablecimiento, String nombre, String descripcion, double costo) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+		try 
+		{
+			tx.begin();
+			long id = nextval();
+			long tuplasInsertadas = sqlCaracteristicaEstablecimiento.adicionarCaracteristicaEstablecimiento(pmf.getPersistenceManager(), id, idEstablecimiento, nombre, descripcion, costo);
+			tx.commit();
+			log.trace("Inserci�n de caracteristica establecimiento id " + id + ": " + tuplasInsertadas + " tuplas insertadas");
+			return new CaracteristicaEstablecimiento(id, nombre, descripcion, costo, idEstablecimiento);
+		} 
+		catch(Exception e) 
+		{
+			log.error("Exception: " + e.getMessage() + "\n" + darDetalleException(e));
+			return null;
+		} 
+		finally 
+		{
+			if(tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+		
+	}
+	
 
 	public long[] limpiarAlohAndes() {
 		// TODO Auto-generated method stub
