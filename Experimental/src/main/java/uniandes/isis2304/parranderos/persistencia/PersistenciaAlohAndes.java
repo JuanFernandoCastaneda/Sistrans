@@ -328,6 +328,12 @@ public class PersistenciaAlohAndes {
 	 * 			M�todos para manejar los USUARIOS
 	 *****************************************************************/
 	
+	/**
+	 * Método que adiciona un usuario.
+	 * @param idTipoUsuario
+	 * @param nombre
+	 * @return el usuario adicionado.
+	 */
 	public Usuario adicionarUsuario(long idTipoUsuario, String nombre) 
 	{
 		PersistenceManager pm = pmf.getPersistenceManager();
@@ -360,6 +366,55 @@ public class PersistenciaAlohAndes {
 	}
 	
 	/**
+	 * Método que retorna los ids de los usuarios tipo comunidad universitaria.
+	 * @return lista de longs.
+	 */
+	public List<Long> darIdsComunidadUniversitaria() 
+	{
+		List<Long> respuesta = new LinkedList <> ();
+		List<Object> tuplas = sqlUsuario.darIdsComunidadUniversitaria (pmf.getPersistenceManager());
+        for ( Object tupla : tuplas)
+        {
+			long id = ((BigDecimal) tupla).longValue ();
+			respuesta.add(id);
+        }
+
+		return respuesta;
+	}
+	
+	/**
+	 * Método que retorna los ids de los establecimientos activos.
+	 * @return lista de longs.
+	 */
+	public List<Long> darIdsOfertasActivas() {
+		List<Long> respuesta = new LinkedList <> ();
+		List<Object> tuplas = sqlEstablecimiento.darIdsOfertasActivas (pmf.getPersistenceManager());
+        for ( Object tupla : tuplas)
+        {
+			long id = ((BigDecimal) tupla).longValue ();
+			respuesta.add(id);
+        }
+
+		return respuesta;
+	}
+	
+	/**
+	 * Método que retorna los ids de los arriendos activos.
+	 * @return lista de longs
+	 */
+	public List<Long> darIdsArriendosActivos() {
+		List<Long> respuesta = new LinkedList <> ();
+		List<Object> tuplas = sqlArriendo.darIdsArriendosActivos (pmf.getPersistenceManager());
+        for ( Object tupla : tuplas)
+        {
+			long id = ((BigDecimal) tupla).longValue ();
+			respuesta.add(id);
+        }
+
+		return respuesta;
+	}
+	
+	/**
 	 * M�todo que se asegura de agregar una nueva reserva.
 	 * 
 	 * @param idUsuario
@@ -371,18 +426,23 @@ public class PersistenciaAlohAndes {
 	public Arriendo adicionarReserva(long idUsuario, long idEstablecimiento, int descuento, Timestamp fechaInicio, int duracion) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx = pm.currentTransaction();
-		try {
+		try 
+		{
 			tx.begin();
 			long id = nextval();
-			String estado = "Activo";
+			String estado = "ACTIVO";
 			long tuplasInsertadas = sqlArriendo.adicionarArriendo(pmf.getPersistenceManager(), id, idUsuario, idEstablecimiento, descuento, fechaInicio, duracion, estado);
 			tx.commit();
 			log.trace("Inserci�n de arriendo id " + id + ": " + tuplasInsertadas + " tuplas insertadas");
 			return new Arriendo(id, idUsuario, idEstablecimiento, descuento, fechaInicio, duracion, estado);
-		} catch(Exception e) {
+		} 
+		catch(Exception e) 
+		{
 			log.error("Exception: " + e.getMessage() + "\n" + darDetalleException(e));
 			return null;
-		} finally {
+		} 
+		finally 
+		{
 			if(tx.isActive()) {
 				tx.rollback();
 			}
@@ -471,14 +531,18 @@ public class PersistenciaAlohAndes {
 	 * 
 	 * @return arreglo con el id de cada una de ellas.
 	 */
-	public List<Long> ofertasMasPopulares() {
-		List<Long> respuesta = new LinkedList <Long> ();
+	public List<Object[]> ofertasMasPopulares() {
+		List<Object[]> respuesta = new LinkedList <Object[]> ();
 		List<Object> tuplas = sqlArriendo.veinteOfertasMasPopulares(pmf.getPersistenceManager());
         for ( Object tupla : tuplas)
         {
 			Object [] datos = (Object []) tupla;
-			long id = ((BigDecimal) datos [0]).longValue ();			
-			respuesta.add(id);
+			long id = ((BigDecimal) datos [0]).longValue ();
+			int cuenta = ((BigDecimal) datos [1]).intValue();
+			Object [] resp = new Object[2];
+			resp[0] = id;
+			resp[1] = cuenta;
+			respuesta.add(resp);
         }
 
 		return respuesta;

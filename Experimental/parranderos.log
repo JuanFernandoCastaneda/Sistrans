@@ -261,3 +261,113 @@ Invalid column type
 18:17:59,399 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 49
 18:18:01,631 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando dinero recibido por cada proveedor
 18:18:01,937 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando dinero recibido por cada proveedor: Listo!
+18:21:50,299 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+18:21:50,300 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+18:21:50,320 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+18:22:08,580 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares
+20:07:09,507 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+20:07:09,508 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+20:07:09,521 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:07:15,308 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+20:09:56,231 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+20:09:56,231 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+20:09:56,245 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+20:10:01,334 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+20:10:01,533 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+03:39:49,980 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+03:39:49,981 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+03:39:50,000 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+03:39:57,721 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+03:39:58,054 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+03:40:40,320 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+03:40:40,321 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+03:40:40,339 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+03:40:48,744 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+03:40:48,991 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+03:40:59,782 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+03:41:00,558 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 61
+03:41:04,020 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando dinero recibido por cada proveedor
+03:41:04,161 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando dinero recibido por cada proveedor: Listo!
+03:41:25,517 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+03:41:25,646 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+03:41:39,777 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+03:41:40,033 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 62
+03:41:43,042 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando dinero recibido por cada proveedor
+03:41:43,169 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando dinero recibido por cada proveedor: Listo!
+03:52:13,899 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+03:52:13,900 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+03:52:13,920 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+03:52:20,621 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+03:52:21,194 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+03:52:39,352 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Cancelando oferta alojamiento
+03:52:40,101 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Cancelada la oferta de alojamiento con id 2
+03:52:45,147 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+03:52:45,524 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+03:56:18,537 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+03:56:18,538 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+03:56:18,561 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+03:56:24,888 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando dinero recibido por cada proveedor
+03:56:25,525 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando dinero recibido por cada proveedor: Listo!
+03:56:29,028 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+03:56:29,380 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+03:57:19,051 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+03:57:19,053 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+03:57:19,075 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+04:05:41,237 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+04:05:41,238 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+04:05:41,257 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+04:05:54,485 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+04:05:54,847 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+04:05:56,426 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+04:06:03,354 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de los arriendos activas
+04:11:11,450 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+04:11:11,451 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+04:11:11,477 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+04:11:17,768 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de los arriendos activas
+04:14:28,498 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+04:14:28,498 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+04:14:28,518 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+04:14:41,094 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de los arriendos activas
+04:20:43,355 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+04:20:43,357 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+04:20:43,381 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+04:21:32,304 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de los arriendos activas
+04:21:38,458 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Cancelando reserva
+04:21:39,366 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Cancelada reserva id 61
+04:21:42,981 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de los arriendos activas
+04:23:20,312 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+04:23:20,314 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+04:23:20,336 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+04:23:25,918 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares
+04:23:26,136 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares: Listo!
+04:24:23,040 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+04:24:23,041 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+04:24:23,074 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+04:24:28,556 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares
+04:43:23,230 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+04:43:23,231 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+04:43:23,254 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+04:43:34,128 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares
+04:43:34,530 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares: Listo!
+04:44:31,563 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+04:44:31,564 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+04:44:31,588 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+04:44:39,274 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares
+04:44:39,469 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares: Listo!
+04:44:48,149 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+04:44:48,351 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+04:44:51,488 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+04:45:03,528 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+04:45:03,833 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 81
+04:45:07,310 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares
+04:45:07,438 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares: Listo!
+04:46:58,793 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+04:46:58,794 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+04:46:58,820 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+04:47:04,265 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares
+04:47:04,508 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares: Listo!
+04:48:13,165 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+04:48:13,166 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+04:48:13,180 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+04:48:19,899 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares
+04:48:20,156 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares: Listo!

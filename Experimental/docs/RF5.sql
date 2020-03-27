@@ -1,3 +1,3 @@
 UPDATE ARRIENDO
-SET estado = Cancelado
+SET estado = 'Cancelado'
 WHERE id = (id deseado)

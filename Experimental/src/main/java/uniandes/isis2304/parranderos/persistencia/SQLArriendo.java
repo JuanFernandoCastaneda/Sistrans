@@ -1,7 +1,6 @@
 package uniandes.isis2304.parranderos.persistencia;
 
 import java.sql.Timestamp;
-import java.util.Date;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
@@ -58,6 +57,20 @@ public class SQLArriendo {
     }
 	
 	/**
+	 * Método que retorna las reservas activas.
+	 * @param pm
+	 * @return lista de objetos.
+	 */
+	public List<Object> darIdsArriendosActivos(PersistenceManager pm) {
+		String query = "SELECT ID"
+				+ " FROM " + pp.darTablaArriendo()
+				+ " WHERE ESTADO = 'ACTIVO'"
+				+ " ORDER BY ID";
+		Query q = pm.newQuery(SQL, query);
+		return q.executeList();
+	}
+	
+	/**
 	 * M�todo para eliminar una reserva en DB.
 	 * 
 	 * @param pm - Persistence Manager.
@@ -77,15 +90,15 @@ public class SQLArriendo {
 	 * @return lista con los ids.
 	 */
 	public List<Object> veinteOfertasMasPopulares(PersistenceManager pm) {
-		String sql1 = "SELECT idEstablecimiento";
+		String sql1 = "SELECT IDESTABLECIMIENTO, COUNT(*)";
 		sql1 += " FROM " + pp.darTablaArriendo ();
-		sql1 += " WHERE estado = 'Activo'"
-				+ " GROUP BY idEstablecimiento"
-				+ " ORDER BY count(*) DESC";
+		sql1 += " WHERE ESTADO = 'ACTIVO'"
+				+ " GROUP BY IDESTABLECIMIENTO"
+				+ " ORDER BY COUNT(*) DESC";
 		
         String sql = "SELECT *";
         sql += " FROM (" + sql1 + ")";
-        sql += " WHERE rownum <= 20";
+        sql += " WHERE ROWNUM <= 20";
 		Query q = pm.newQuery(SQL, sql);
 		return q.executeList();
 	}

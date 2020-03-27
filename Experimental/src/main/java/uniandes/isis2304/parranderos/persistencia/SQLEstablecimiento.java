@@ -1,6 +1,6 @@
 package uniandes.isis2304.parranderos.persistencia;
 
-import java.sql.Timestamp;
+import java.util.List;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
@@ -34,6 +34,20 @@ public class SQLEstablecimiento {
 	public SQLEstablecimiento (PersistenciaAlohAndes pp)
 	{
 		this.pp = pp;
+	}
+	
+	/**
+	 * Método que retorna los establecimientos activos.
+	 * @param pm
+	 * @return lista con los ids de los establecimeintos.
+	 */
+	public List<Object> darIdsOfertasActivas(PersistenceManager pm) {
+		String query = "SELECT ID"
+				+ " FROM " + pp.darTablaEstablecimiento()
+				+ " WHERE ACTIVO = 1"
+				+ " ORDER BY ID";
+		Query q = pm.newQuery(SQL, query);
+		return q.executeList();
 	}
 	
 	/**

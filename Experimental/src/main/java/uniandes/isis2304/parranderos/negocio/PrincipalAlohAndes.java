@@ -61,12 +61,47 @@ public class PrincipalAlohAndes {
 	 * 			M�todos para manejar los USUARIOS
 	 *****************************************************************/
 
+	/**
+	 * Método que comunica con la persistencia para adicionar un usuario.
+	 * @param idTipoUsuario
+	 * @param nombre
+	 * @return el usuario creado
+	 */
 	public Usuario adicionarUsuario (long idTipoUsuario, String nombre)
 	{
 		log.info ("Adicionando usuario " + nombre);
 		Usuario usuario = pp.adicionarUsuario (idTipoUsuario, nombre);
         log.info ("Adicionando usuario: " + usuario);
         return usuario;
+	}
+	
+	/**
+	 * Método que se comunica con la persistencia para retornar los ids de los miembros de la comunidad un.
+	 * @return lista con los ids.
+	 */
+	public List<Long> darIdsComunidadUniversitaria() {
+		log.info("Retornando los ids de la comunidad universitaria");
+		List<Long> respuesta = pp.darIdsComunidadUniversitaria();
+		log.info("Retornados los ids de la comunidad universitaria");
+		return respuesta;
+	}
+	
+	/**
+	 * Método que retorna los ids de las ofertas activas.
+	 * @return lista de longs.
+	 */
+	public List<Long> darIdsOfertasActivas() {
+		log.info("Retornando los ids de las ofertas activas");
+		return pp.darIdsOfertasActivas();
+	}
+	
+	/**
+	 * Método que retorna los ids de los arriendos activos.
+	 * @return lista de longs.
+	 */
+	public List<Long> darIdsArriendosActivos() {
+		log.info("Retornando los ids de los arriendos activas");
+		return pp.darIdsArriendosActivos();
 	}
 
 	/**
@@ -128,9 +163,9 @@ public class PrincipalAlohAndes {
 	 * 
 	 * @return arreglo con los ids de las ofertas.
 	 */
-	public List<Long> ofertasMasPopulares() {
+	public List<Object[]> ofertasMasPopulares() {
 		log.info ("Listando ofertas m�s populares");
-        List<Long> tuplas = pp.ofertasMasPopulares ();
+        List<Object[]> tuplas = pp.ofertasMasPopulares ();
         log.info ("Listando ofertas m�s populares: Listo!");
         return tuplas;
 	}

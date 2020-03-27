@@ -36,11 +36,33 @@ public class SQLUsuario {
 		this.pp = pp;
 	}
 	
+	/**
+	 * Método que agrega un usuario nuevo.
+	 * @param pm
+	 * @param id
+	 * @param idTipoUsuario
+	 * @param nombre
+	 * @return
+	 */
 	public long adicionarUsuario(PersistenceManager pm, long id, long idTipoUsuario, String nombre) 
 	{
         Query q = pm.newQuery(SQL, "INSERT INTO " + pp.darTablaUsuario () + "(id, idTipoUsuario, nombre) values (?, ?, ?)");
         q.setParameters(id, idTipoUsuario, nombre);
         return (long) q.executeUnique();
+	}
+	
+	/**
+	 * Método que retorna todos los ids de los usuarios tipo comunidad universitaria. 
+	 * @param pm
+	 * @return lista con todos los ids.
+	 */
+	public List<Object> darIdsComunidadUniversitaria(PersistenceManager pm) {
+		String query = "SELECT U.ID"
+				+ " FROM " + pp.darTablaUsuario() + " U, " + pp.darTablaTipoUsuario() + " TU"
+				+ " WHERE U.TIPOUSUARIO = TU.ID AND TU.TIPOUSUARIO = 'COMUNIDADUNIVERSITARIA'"
+				+ " ORDER BY U.ID";
+		Query q = pm.newQuery(SQL, query);
+		return q.executeList();
 	}
 	
 	/**
@@ -53,7 +75,7 @@ public class SQLUsuario {
 		String sql = "SELECT IDDUENIO, SUM(COSTO * DURACION * (100 - DESCUENTO) / 100)";
 		sql += " FROM " + pp.darTablaEstablecimiento() + " ESTABLECIMIENTO";
 		sql += " INNER JOIN "+ pp.darTablaArriendo() + " ARRIENDO ON ESTABLECIMIENTO.ID = ARRIENDO.IDESTABLECIMIENTO";
-		sql += " WHERE EXTRACT(YEAR FROM FECHAINICIO) = EXTRACT(YEAR FROM CURRENT_DATE)"; 
+		sql += " WHERE EXTRACT(YEAR FROM FECHAINICIO) = EXTRACT(YEAR FROM CURRENT_DATE) AND ESTADO = 'ACTIVO'"; 
 		sql += " GROUP BY IDDUENIO";
 		Query q = pm.newQuery(SQL, sql);
 		return q.executeList();
