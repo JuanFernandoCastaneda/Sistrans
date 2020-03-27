@@ -1,5 +1,6 @@
 package uniandes.isis2304.parranderos.persistencia;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
@@ -35,6 +36,14 @@ public class SQLEstablecimiento {
 	{
 		this.pp = pp;
 	}
+	
+	public long adicionarEstablecimiento(PersistenceManager pm, long id, String nombre, long idTipoEstablecimiento, String direccion, 
+			double costo, boolean porDiaOMes, boolean activo, long idSeguroArrendamiento, long idHorario, long idDuenio) {
+		Query q = pm.newQuery(SQL, "INSERT INTO " + pp.darTablaEstablecimiento () + " (id, nombre, idTipoEstablecimiento, direccion, "
+				+ "costo, porDiaOMes, activo, idSeguroArrendamiento, idHorario, idDuenio) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        q.setParameters(id, nombre, idTipoEstablecimiento, direccion, costo, porDiaOMes, activo, idSeguroArrendamiento, idHorario, idDuenio);
+        return (long) q.executeUnique();
+    }
 	
 	/**
 	 * Método que retorna los establecimientos activos.

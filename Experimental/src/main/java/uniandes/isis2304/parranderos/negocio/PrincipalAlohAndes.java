@@ -170,6 +170,13 @@ public class PrincipalAlohAndes {
         return tuplas;
 	}
 	
+	public Establecimiento adicionarEstablecimiento(String nombre, long idTipoEstablecimiento, String direccion, double costo,
+			boolean porDiaOMes, long idSeguroArrendamiento, long idDuenio, long idHorario, boolean activo) {
+		log.info("Adicionando Establecimiento");
+		Establecimiento establecimiento = pp.adicionarEstablecimiento(nombre, idTipoEstablecimiento, direccion, costo, porDiaOMes, activo, idSeguroArrendamiento, idHorario, idDuenio);
+		log.info("Adicionado Establecimiento id " + establecimiento.getId());
+		return establecimiento;
+	}
 	
 	/* ****************************************************************
 	 * 			M�todos para administraci�n
@@ -180,11 +187,11 @@ public class PrincipalAlohAndes {
 	 * @return Un arreglo
 	 */
 	//TODO no es tan necesario.
-//	public long [] limpiarAlohAndes ()
-//	{
-//        log.info ("Limpiando la BD de AlohAndes");
-//        long [] borrrados = pp.limpiarAlohAndes();	
-//        log.info ("Limpiando la BD de AlohAndes: Listo!");
-//        return borrrados;
-//	}
+	public long [] limpiarAlohAndes ()
+	{
+        log.info ("Limpiando la BD de AlohAndes");
+        //long [] borrrados = pp.limpiarAlohAndes();	
+        log.info ("Limpiando la BD de AlohAndes: Listo!");
+        return null;
+	}
 }

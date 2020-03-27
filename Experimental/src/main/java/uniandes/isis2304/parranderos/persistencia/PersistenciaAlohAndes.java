@@ -17,6 +17,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import uniandes.isis2304.parranderos.negocio.Arriendo;
+import uniandes.isis2304.parranderos.negocio.Establecimiento;
 import uniandes.isis2304.parranderos.negocio.Usuario;
 
 public class PersistenciaAlohAndes {
@@ -546,6 +547,38 @@ public class PersistenciaAlohAndes {
         }
 
 		return respuesta;
+	}
+	
+	public Establecimiento adicionarEstablecimiento(String nombre, long idTipoEstablecimiento, String direccion, 
+			double costo, boolean porDiaOMes, boolean activo, long idSeguroArrendamiento, long idHorario, long idDuenio) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+		Transaction tx = pm.currentTransaction();
+		try 
+		{
+			tx.begin();
+			long id = nextval();
+			long tuplasInsertadas = sqlEstablecimiento.adicionarEstablecimiento(pmf.getPersistenceManager(), id, nombre, idTipoEstablecimiento, direccion, costo, porDiaOMes, activo, idSeguroArrendamiento, idHorario, idDuenio);
+			tx.commit();
+			log.trace("Inserci�n de arriendo id " + id + ": " + tuplasInsertadas + " tuplas insertadas");
+			return new Establecimiento(id, nombre, idTipoEstablecimiento, direccion, costo, porDiaOMes, idSeguroArrendamiento, idDuenio, idHorario, activo);
+		} 
+		catch(Exception e) 
+		{
+			log.error("Exception: " + e.getMessage() + "\n" + darDetalleException(e));
+			return null;
+		} 
+		finally 
+		{
+			if(tx.isActive()) {
+				tx.rollback();
+			}
+			pm.close();
+		}
+	}
+
+	public long[] limpiarAlohAndes() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }
