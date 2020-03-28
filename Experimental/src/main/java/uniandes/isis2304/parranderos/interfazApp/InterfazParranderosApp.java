@@ -404,7 +404,34 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 		panelDatos.actualizarInterfaz(resultado);
 	}
 
+	/**
+	 * Método que adiciona un establecimiento.
+	 */
+	public void adicionarEstablecimiento( )
+	{
 
+	
+//			String nombre = JOptionPane.showInputDialog (this, "Descuento", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE);
+//			Long idTipoEstablecimiento = (Long) JOptionPane.showInputDialog (this, "Id del establecimiento", "Adicionar reserva", JOptionPane.QUESTION_MESSAGE);
+//			
+//			String direccion = JOptionPane.showInputDialog (this, "Dirección", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE);
+//			double costo = JOptionPane.showInputDialog (this, "Costo en números", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE);
+//			int porDiaOMes = JOptionPane.showInputDialog (this, "Por día o mes: escribir 0 para días o 1 para mes", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE);
+//			long idSeguroArrendamiento = JOptionPane.showInputDialog (this, "Duración", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE);
+//			long idDuenio =
+//			long idHorario
+//			int activo
+					
+
+	}
+
+	public void adicionarCaracteristicaEstablecimiento()
+	{
+		//long idEstablecimiento =
+		String nombre = JOptionPane.showInputDialog (this, "Nombre", "Adicionar Característica de establecimiento", JOptionPane.QUESTION_MESSAGE);
+		String descripcion = JOptionPane.showInputDialog (this, "Descripción", "Característica de establecimiento", JOptionPane.QUESTION_MESSAGE);
+		//double costo
+	}
 
 	//
 	//	/* ****************************************************************

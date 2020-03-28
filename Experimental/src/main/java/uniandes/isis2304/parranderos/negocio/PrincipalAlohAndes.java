@@ -179,7 +179,7 @@ public class PrincipalAlohAndes {
 	}
 	
 	public CaracteristicaEstablecimiento adicionarCaracteristicaEstablecimiento(long idEstablecimiento, String nombre, String descripcion, double costo) {
-		log.info("Adicionando CaracteristicaEstablecimient");
+		log.info("Adicionando CaracteristicaEstablecimiento");
 		CaracteristicaEstablecimiento caracteristicaEstablecimiento = pp.adicionarCaracteristicaEstablecimiento(idEstablecimiento, nombre, descripcion, costo);
 		log.info("Adicionado CaracteristicaEstablecimiento id " + caracteristicaEstablecimiento.getId());
 		return caracteristicaEstablecimiento;
