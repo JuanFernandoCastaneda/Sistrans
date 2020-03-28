@@ -242,6 +242,35 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 	 *****************************************************************/
 
 	/**
+	 * Método para confirmar si hay reservas en las fechas deseadas
+	 * @param fechaInicio
+	 * @param duracion
+	 * @param fechasReservadas
+	 * @return true si sí hay, false si no;
+	 */
+	@SuppressWarnings("deprecation")
+	private boolean hayConflictoFechas(Timestamp fechaInicio, int duracion, List<Object[]> fechasReservadas) {
+		boolean seCruza = false;
+		Timestamp diasExtras = new Timestamp(70, 0, duracion, 0, 0, 0, 0);
+		long longFechaFin = fechaInicio.getTime() + diasExtras.getTime();
+		Timestamp fechaFin = new Timestamp (longFechaFin);
+	    fechaInicio.setDate(fechaInicio.getDate());
+		for(Object[] fechaReserva: fechasReservadas)
+		{
+			Timestamp inicioReserva = (Timestamp) fechaReserva[0];
+			Timestamp finReserva = new Timestamp(inicioReserva.getTime() + (int) fechaReserva[1]);
+			if(fechaInicio.after(inicioReserva) && fechaInicio.before(finReserva)
+					|| fechaFin.after(inicioReserva) && fechaFin.before(finReserva)
+					|| fechaInicio.before(inicioReserva) && fechaFin.after(finReserva)) 
+			{
+				seCruza = true;
+				break;
+			}
+		}
+		return seCruza;
+	}
+	
+	/**
 	 * Adiciona un tipo de bebida con la información dada por el usuario
 	 * Se crea una nueva tupla de tipoBebida en la base de datos, si un tipo de bebida con ese nombre no existía
 	 */
@@ -265,31 +294,40 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 					if (idUsuario != null && idEstablecimiento != null && anio != null && mes != null && dia != null && descuento != null && duracion != null)
 					{
 						@SuppressWarnings("deprecation")
-						Timestamp fechaInicio = new Timestamp(Integer.parseInt(anio) - 1900, Integer.parseInt(mes), Integer.parseInt(dia), 0, 0, 0, 0);
-						VOArriendo ar = alohandes.adicionarReserva(idUsuario, idEstablecimiento, Integer.parseInt(descuento), fechaInicio, 
-								Integer.parseInt(duracion));
-						if (ar == null)
+						Timestamp fechaInicio = new Timestamp(Integer.parseInt(anio) - 1900, Integer.parseInt(mes) - 1, Integer.parseInt(dia), 0, 0, 0, 0);
+						List<Object[]> fechasReservas = alohandes.darFechasReservasEstablecimientoPorId(idEstablecimiento);
+						boolean seCruza = hayConflictoFechas(fechaInicio, Integer.parseInt(duracion), fechasReservas);
+						if(!seCruza) 
 						{
-							throw new Exception ("No se pudo crear la reserva");
+							VOArriendo ar = alohandes.adicionarReserva(idUsuario, idEstablecimiento, Integer.parseInt(descuento), fechaInicio, 
+									Integer.parseInt(duracion));
+							if (ar == null)
+							{
+								throw new Exception ("No se pudo crear la reserva");
+							}
+							String resultado = "En adicionarReserva\n\n";
+							resultado += "Reserva adicionada exitosamente: " + ar.getId();
+							resultado += "\n Operación terminada";
+							panelDatos.actualizarInterfaz(resultado);
 						}
-						String resultado = "En adicionarReserva\n\n";
-						resultado += "Reserva adicionada exitosamente: " + ar.getId();
-						resultado += "\n Operación terminada";
-						panelDatos.actualizarInterfaz(resultado);
+						else
+						{
+							panelDatos.actualizarInterfaz("Ya existe una reserva para esas fechas");
+						}
 					}
 					else
 					{
-						panelDatos.actualizarInterfaz("No existen establecimientos sobre los cuales reservar");
+						panelDatos.actualizarInterfaz("El usuario canceló la operación");
 					}
 				}
 				else
 				{
-					panelDatos.actualizarInterfaz("No existen usuarios que puedan hacer una reserva");
+					panelDatos.actualizarInterfaz("No existen establecimientos sobre los cuales reservar");
 				}
 			}
 			else
 			{
-				
+				panelDatos.actualizarInterfaz("No existen usuarios que puedan hacer una reserva");
 			}
 		} 
 		catch (Exception e) 
@@ -310,7 +348,7 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 			List<Long> ofertasActivas = alohandes.darIdsArriendosActivos();
 			if(ofertasActivas.size() > 0) {
 				Long id = (Long) JOptionPane.showInputDialog (this, "Id de la reserva", "Cancelar reserva", JOptionPane.QUESTION_MESSAGE, null, ofertasActivas.toArray(), (Object) ofertasActivas.get(0));			
-	    		if (id != null)
+				if (id != null)
 				{
 					long idReserva = Long.valueOf (id);
 					long reCancelada = alohandes.cancelarReserva(idReserva);
@@ -346,28 +384,28 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 		try 
 		{
 			List<Long> ofertasActivas = alohandes.darIdsOfertasActivas();
-    		if(ofertasActivas.size() > 0) 
-    		{
-    			Long id = (Long) JOptionPane.showInputDialog (this, "Id del establecimiento", "Retirar oferta de alojamiento", JOptionPane.QUESTION_MESSAGE, null, ofertasActivas.toArray(), (Object) ofertasActivas.get(0));
-    			if (id != null)
-    			{
-    				long idEstab = Long.valueOf (id);
-    				long esCancelada = alohandes.cancelarOfertaAlojamiento(idEstab);
+			if(ofertasActivas.size() > 0) 
+			{
+				Long id = (Long) JOptionPane.showInputDialog (this, "Id del establecimiento", "Retirar oferta de alojamiento", JOptionPane.QUESTION_MESSAGE, null, ofertasActivas.toArray(), (Object) ofertasActivas.get(0));
+				if (id != null)
+				{
+					long idEstab = Long.valueOf (id);
+					long esCancelada = alohandes.cancelarOfertaAlojamiento(idEstab);
 
-    				String resultado = "En Cancelar Oferta\n\n";
-    				resultado += "La oferta del establecimiento " + esCancelada + " fue cancelada\n";
-    				resultado += "\n Operación terminada";
-    				panelDatos.actualizarInterfaz(resultado);
-    			}
-    			else
-    			{
-    				panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
-    			}
-    		}
-    		else
-    		{
+					String resultado = "En Cancelar Oferta\n\n";
+					resultado += "La oferta del establecimiento " + esCancelada + " fue cancelada\n";
+					resultado += "\n Operación terminada";
+					panelDatos.actualizarInterfaz(resultado);
+				}
+				else
+				{
+					panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
+				}
+			}
+			else
+			{
 				panelDatos.actualizarInterfaz("No hay ofertas de alojamiento por cancelar");
-    		}
+			}
 		}
 		catch (Exception e) 
 		{
@@ -411,24 +449,23 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 	{
 
 	
-//			String nombre = JOptionPane.showInputDialog (this, "Descuento", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE);
-//			Long idTipoEstablecimiento = (Long) JOptionPane.showInputDialog (this, "Id del establecimiento", "Adicionar reserva", JOptionPane.QUESTION_MESSAGE);
-//			
-//			String direccion = JOptionPane.showInputDialog (this, "Dirección", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE);
-//			double costo = JOptionPane.showInputDialog (this, "Costo en números", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE);
-//			int porDiaOMes = JOptionPane.showInputDialog (this, "Por día o mes: escribir 0 para días o 1 para mes", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE);
-//			long idSeguroArrendamiento = JOptionPane.showInputDialog (this, "Duración", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE);
-//			long idDuenio =
-//			long idHorario
-//			int activo
-					
-
+		String nombre = JOptionPane.showInputDialog (this, "Descuento", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE);
+		Long idTipoEstablecimiento = Long.parseLong(JOptionPane.showInputDialog (this, "Id del tipo de establecimiento", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE));	
+		String direccion = JOptionPane.showInputDialog (this, "Dirección", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE);
+		double costo = Double.parseDouble(JOptionPane.showInputDialog (this, "Costo en números", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE));
+		int porDiaOMes = Integer.parseInt(JOptionPane.showInputDialog (this, "Por día o mes: escribir 0 para días o 1 para mes", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE));
+		long idSeguroArrendamiento = Long.parseLong(JOptionPane.showInputDialog (this, "Id del seguro de arrendamiento", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE));
+		long idDuenio = Long.parseLong(JOptionPane.showInputDialog (this, "Id del dueno(usuario)", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE));
+		long idHorario = Long.parseLong(JOptionPane.showInputDialog (this, "Id del horario", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE));
+		int activo = Integer.parseInt(JOptionPane.showInputDialog (this, "activo: escribir 0 para no activo o 1 para activo", "Adicionar establecimiento", JOptionPane.QUESTION_MESSAGE));
+		
+		
 	}
 
 	public void adicionarCaracteristicaEstablecimiento()
 	{
-		//long idEstablecimiento =
-		String nombre = JOptionPane.showInputDialog (this, "Nombre", "Adicionar Característica de establecimiento", JOptionPane.QUESTION_MESSAGE);
+		long idEstablecimiento = Long.parseLong(JOptionPane.showInputDialog (this, "Id del establecimiento", "Adicionar característica de establecimiento", JOptionPane.QUESTION_MESSAGE));
+		String nombre = JOptionPane.showInputDialog (this, "Nombre", "Adicionar característica de establecimiento", JOptionPane.QUESTION_MESSAGE);
 		String descripcion = JOptionPane.showInputDialog (this, "Descripción", "Característica de establecimiento", JOptionPane.QUESTION_MESSAGE);
 		//double costo
 	}

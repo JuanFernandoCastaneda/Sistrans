@@ -417,6 +417,30 @@ public class PersistenciaAlohAndes {
 	}
 	
 	/**
+	 * Método que retorna un arreglo con las fechas de las resevas.
+	 * @param id
+	 * @return en casilla 0 la fecha de inicio y en casilla 1 la duración
+	 */
+	public List<Object[]> darFechasReservasEstablecimientoPorId(long id) {
+		List<Object []> respuesta = new LinkedList <Object []> ();
+		List<Object> tuplas = sqlArriendo.darFechasReservasEstablecimientoPorId(pmf.getPersistenceManager(), id);
+        for ( Object tupla : tuplas)
+        {
+			Object [] datos = (Object []) tupla;
+			Timestamp fechaInicio = ((Timestamp) datos [0]);
+			int duracion = ((BigDecimal) datos [1]).intValue();
+
+			Object [] resp = new Object [2];
+			resp [0] = fechaInicio;
+			resp [1] = duracion;	
+			
+			respuesta.add(resp);
+        }
+
+		return respuesta;
+	}
+	
+	/**
 	 * M�todo que se asegura de agregar una nueva reserva.
 	 * 
 	 * @param idUsuario

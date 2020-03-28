@@ -371,3 +371,134 @@ Invalid column type
 04:48:13,180 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
 04:48:19,899 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares
 04:48:20,156 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares: Listo!
+16:20:29,658 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+16:20:29,695 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+16:20:29,781 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+16:20:43,082 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares
+16:20:43,831 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares: Listo!
+16:20:47,185 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+16:20:47,341 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+16:20:49,254 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+16:20:57,824 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+16:20:57,948 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+16:20:58,246 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 82
+16:21:01,631 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares
+16:21:01,751 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando ofertas m�s populares: Listo!
+16:21:05,445 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando dinero recibido por cada proveedor
+16:21:05,567 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Listando dinero recibido por cada proveedor: Listo!
+16:24:33,232 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+16:24:33,350 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+16:24:48,183 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+16:29:33,396 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+16:29:33,698 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+16:29:36,712 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+16:30:47,211 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+16:30:47,406 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+16:30:48,032 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 83
+16:31:00,223 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+16:31:00,470 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+16:31:03,663 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+16:31:34,452 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+16:31:34,578 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+16:31:34,871 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 84
+16:34:18,299 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+16:34:18,301 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+16:34:18,355 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+16:34:29,470 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+16:34:29,727 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+16:34:31,140 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+16:34:41,016 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+16:34:41,204 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+16:34:41,496 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 85
+16:35:53,868 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+16:35:53,871 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+16:35:53,907 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+16:36:12,218 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+16:36:19,786 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+16:36:30,676 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+16:37:04,851 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+16:37:04,853 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+16:37:04,892 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+16:37:17,239 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+16:37:24,623 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+16:37:36,268 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+16:38:46,486 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+16:45:06,839 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+16:45:06,840 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+16:45:06,887 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+16:45:13,424 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+16:45:13,694 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+16:45:17,661 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+16:45:27,710 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+16:45:48,037 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+16:45:48,038 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+16:45:48,068 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+16:46:06,489 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+16:46:13,928 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+16:46:28,060 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+16:47:42,143 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+17:06:08,996 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+17:06:08,996 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+17:06:09,011 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+17:06:38,806 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+17:06:39,409 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+17:06:41,192 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+17:06:51,213 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+17:06:51,598 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+17:06:52,199 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 86
+17:07:46,581 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+17:07:46,714 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+17:07:49,136 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+17:07:58,840 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+17:07:58,971 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+17:07:59,224 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 87
+17:09:11,772 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+17:09:11,774 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+17:09:11,803 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+17:13:13,171 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+17:13:13,449 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+17:13:14,776 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+17:13:44,344 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+17:18:48,202 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+17:18:48,202 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+17:18:48,218 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+17:19:03,595 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+17:19:03,895 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+17:19:15,056 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+17:19:24,957 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+17:19:25,090 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+17:19:25,388 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 88
+17:19:43,723 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+17:19:43,725 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+17:19:43,748 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+17:19:49,134 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+17:19:49,572 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+17:19:53,169 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+17:20:00,839 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+17:24:03,959 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+17:24:03,960 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+17:24:03,978 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+17:24:12,676 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+17:24:12,677 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+17:24:12,699 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+17:24:21,498 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+17:24:21,758 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+17:24:23,230 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+17:24:31,431 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+17:25:54,462 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Interfaz
+17:25:54,462 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se aplica configuración indicada en el archivo de configuración
+17:25:54,479 (main) INFO  [uniandes.isis2304.parranderos.interfazApp.InterfazParranderosApp] - Se encontró un archivo de configuración válido: Tablas BD
+17:25:59,262 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+17:25:59,513 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+17:26:00,647 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+17:26:07,994 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+17:26:40,693 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+17:26:40,829 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+17:26:42,193 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+17:26:53,053 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+17:27:00,593 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de la comunidad universitaria
+17:27:00,719 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornados los ids de la comunidad universitaria
+17:27:02,344 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando los ids de las ofertas activas
+17:27:15,912 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Retornando las fechas de las reservas de un establecimiento
+17:27:16,033 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionando reserva
+17:27:16,420 (AWT-EventQueue-0) INFO  [uniandes.isis2304.parranderos.negocio.PrincipalAlohAndes] - Adicionada reserva id 89
