@@ -177,6 +177,15 @@ public class PrincipalAlohAndes {
 		log.info("Adicionado Establecimiento id " + establecimiento.getId());
 		return establecimiento;
 	}
+	/**
+	 * Método que retorna las fechas de las reservas de un establecimiento.
+	 * @param id
+	 * @return arreglo con la información
+	 */
+	public List<Object[]> darFechasReservasEstablecimientoPorId(long id) {
+		log.info ("Retornando las fechas de las reservas de un establecimiento");
+		return pp.darFechasReservasEstablecimientoPorId(id);
+	}
 	
 	public CaracteristicaEstablecimiento adicionarCaracteristicaEstablecimiento(long idEstablecimiento, String nombre, String descripcion, double costo) {
 		log.info("Adicionando CaracteristicaEstablecimiento");
@@ -184,6 +193,7 @@ public class PrincipalAlohAndes {
 		log.info("Adicionado CaracteristicaEstablecimiento id " + caracteristicaEstablecimiento.getId());
 		return caracteristicaEstablecimiento;
 	}
+	
 	
 	/* ****************************************************************
 	 * 			M�todos para administraci�n

@@ -71,6 +71,20 @@ public class SQLArriendo {
 	}
 	
 	/**
+	 * Método para retornar las reservas de un establecimiento según id.
+	 * @param pm
+	 * @param id
+	 * @return lista de objetos.
+	 */
+	public List<Object> darFechasReservasEstablecimientoPorId(PersistenceManager pm, long id) {
+		String query = "SELECT FECHAINICIO, DURACION"
+				+ " FROM " + pp.darTablaArriendo()
+				+ " WHERE IDESTABLECIMIENTO = " + id;
+		Query q = pm.newQuery(SQL, query);
+		return q.executeList();
+	}
+	
+	/**
 	 * M�todo para eliminar una reserva en DB.
 	 * 
 	 * @param pm - Persistence Manager.
@@ -79,7 +93,7 @@ public class SQLArriendo {
 	 */
 	public long cancelarArriendo(PersistenceManager pm, long idArriendo) {
 		Query q = pm.newQuery(SQL, "UPDATE " + pp.darTablaArriendo () + " SET estado = ? WHERE id = ?");
-        q.setParameters("Cancelado", idArriendo);
+        q.setParameters("CANCELADO", idArriendo);
         return (long) q.executeUnique();
 	}
 	

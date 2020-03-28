@@ -242,6 +242,35 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 	 *****************************************************************/
 
 	/**
+	 * Método para confirmar si hay reservas en las fechas deseadas
+	 * @param fechaInicio
+	 * @param duracion
+	 * @param fechasReservadas
+	 * @return true si sí hay, false si no;
+	 */
+	@SuppressWarnings("deprecation")
+	private boolean hayConflictoFechas(Timestamp fechaInicio, int duracion, List<Object[]> fechasReservadas) {
+		boolean seCruza = false;
+		Timestamp diasExtras = new Timestamp(70, 0, duracion, 0, 0, 0, 0);
+		long longFechaFin = fechaInicio.getTime() + diasExtras.getTime();
+		Timestamp fechaFin = new Timestamp (longFechaFin);
+	    fechaInicio.setDate(fechaInicio.getDate());
+		for(Object[] fechaReserva: fechasReservadas)
+		{
+			Timestamp inicioReserva = (Timestamp) fechaReserva[0];
+			Timestamp finReserva = new Timestamp(inicioReserva.getTime() + (int) fechaReserva[1]);
+			if(fechaInicio.after(inicioReserva) && fechaInicio.before(finReserva)
+					|| fechaFin.after(inicioReserva) && fechaFin.before(finReserva)
+					|| fechaInicio.before(inicioReserva) && fechaFin.after(finReserva)) 
+			{
+				seCruza = true;
+				break;
+			}
+		}
+		return seCruza;
+	}
+	
+	/**
 	 * Adiciona un tipo de bebida con la información dada por el usuario
 	 * Se crea una nueva tupla de tipoBebida en la base de datos, si un tipo de bebida con ese nombre no existía
 	 */
@@ -265,31 +294,40 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 					if (idUsuario != null && idEstablecimiento != null && anio != null && mes != null && dia != null && descuento != null && duracion != null)
 					{
 						@SuppressWarnings("deprecation")
-						Timestamp fechaInicio = new Timestamp(Integer.parseInt(anio) - 1900, Integer.parseInt(mes), Integer.parseInt(dia), 0, 0, 0, 0);
-						VOArriendo ar = alohandes.adicionarReserva(idUsuario, idEstablecimiento, Integer.parseInt(descuento), fechaInicio, 
-								Integer.parseInt(duracion));
-						if (ar == null)
+						Timestamp fechaInicio = new Timestamp(Integer.parseInt(anio) - 1900, Integer.parseInt(mes) - 1, Integer.parseInt(dia), 0, 0, 0, 0);
+						List<Object[]> fechasReservas = alohandes.darFechasReservasEstablecimientoPorId(idEstablecimiento);
+						boolean seCruza = hayConflictoFechas(fechaInicio, Integer.parseInt(duracion), fechasReservas);
+						if(!seCruza) 
 						{
-							throw new Exception ("No se pudo crear la reserva");
+							VOArriendo ar = alohandes.adicionarReserva(idUsuario, idEstablecimiento, Integer.parseInt(descuento), fechaInicio, 
+									Integer.parseInt(duracion));
+							if (ar == null)
+							{
+								throw new Exception ("No se pudo crear la reserva");
+							}
+							String resultado = "En adicionarReserva\n\n";
+							resultado += "Reserva adicionada exitosamente: " + ar.getId();
+							resultado += "\n Operación terminada";
+							panelDatos.actualizarInterfaz(resultado);
 						}
-						String resultado = "En adicionarReserva\n\n";
-						resultado += "Reserva adicionada exitosamente: " + ar.getId();
-						resultado += "\n Operación terminada";
-						panelDatos.actualizarInterfaz(resultado);
+						else
+						{
+							panelDatos.actualizarInterfaz("Ya existe una reserva para esas fechas");
+						}
 					}
 					else
 					{
-						panelDatos.actualizarInterfaz("No existen establecimientos sobre los cuales reservar");
+						panelDatos.actualizarInterfaz("El usuario canceló la operación");
 					}
 				}
 				else
 				{
-					panelDatos.actualizarInterfaz("No existen usuarios que puedan hacer una reserva");
+					panelDatos.actualizarInterfaz("No existen establecimientos sobre los cuales reservar");
 				}
 			}
 			else
 			{
-				
+				panelDatos.actualizarInterfaz("No existen usuarios que puedan hacer una reserva");
 			}
 		} 
 		catch (Exception e) 
@@ -310,7 +348,7 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 			List<Long> ofertasActivas = alohandes.darIdsArriendosActivos();
 			if(ofertasActivas.size() > 0) {
 				Long id = (Long) JOptionPane.showInputDialog (this, "Id de la reserva", "Cancelar reserva", JOptionPane.QUESTION_MESSAGE, null, ofertasActivas.toArray(), (Object) ofertasActivas.get(0));			
-	    		if (id != null)
+				if (id != null)
 				{
 					long idReserva = Long.valueOf (id);
 					long reCancelada = alohandes.cancelarReserva(idReserva);
@@ -346,28 +384,28 @@ public class InterfazParranderosApp extends JFrame implements ActionListener
 		try 
 		{
 			List<Long> ofertasActivas = alohandes.darIdsOfertasActivas();
-    		if(ofertasActivas.size() > 0) 
-    		{
-    			Long id = (Long) JOptionPane.showInputDialog (this, "Id del establecimiento", "Retirar oferta de alojamiento", JOptionPane.QUESTION_MESSAGE, null, ofertasActivas.toArray(), (Object) ofertasActivas.get(0));
-    			if (id != null)
-    			{
-    				long idEstab = Long.valueOf (id);
-    				long esCancelada = alohandes.cancelarOfertaAlojamiento(idEstab);
+			if(ofertasActivas.size() > 0) 
+			{
+				Long id = (Long) JOptionPane.showInputDialog (this, "Id del establecimiento", "Retirar oferta de alojamiento", JOptionPane.QUESTION_MESSAGE, null, ofertasActivas.toArray(), (Object) ofertasActivas.get(0));
+				if (id != null)
+				{
+					long idEstab = Long.valueOf (id);
+					long esCancelada = alohandes.cancelarOfertaAlojamiento(idEstab);
 
-    				String resultado = "En Cancelar Oferta\n\n";
-    				resultado += "La oferta del establecimiento " + esCancelada + " fue cancelada\n";
-    				resultado += "\n Operación terminada";
-    				panelDatos.actualizarInterfaz(resultado);
-    			}
-    			else
-    			{
-    				panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
-    			}
-    		}
-    		else
-    		{
+					String resultado = "En Cancelar Oferta\n\n";
+					resultado += "La oferta del establecimiento " + esCancelada + " fue cancelada\n";
+					resultado += "\n Operación terminada";
+					panelDatos.actualizarInterfaz(resultado);
+				}
+				else
+				{
+					panelDatos.actualizarInterfaz("Operación cancelada por el usuario");
+				}
+			}
+			else
+			{
 				panelDatos.actualizarInterfaz("No hay ofertas de alojamiento por cancelar");
-    		}
+			}
 		}
 		catch (Exception e) 
 		{
